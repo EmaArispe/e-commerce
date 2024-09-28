@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: myRedis
+    ports:
+      - "6379:6379"  # Mapea el puerto 6379 del contenedor al host
+    volumes:
+      - /data  # Persistencia de datos
+    command: redis-server --loglevel warning --requirepass root # Habilita la autenticación
+
+
+
+
+
